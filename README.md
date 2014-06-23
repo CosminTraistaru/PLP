@@ -30,7 +30,7 @@ without,hello,bag,world
 Then, the output should be:
 bag,hello,without,world
 
-	Problem 4:
+    Problem 4:
 Write a program that accepts a sentence and calculate the number of letters and digits.
 Suppose the following input is supplied to the program:
 hello world! 123
@@ -38,7 +38,7 @@ Then, the output should be:
 LETTERS 10
 DIGITS 3
 
-       Problem 5:
+    Problem 5:
 Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"] and the object is in ["Hockey","Football"].
 
 Hints:
@@ -47,7 +47,8 @@ Use list[index] notation to get a element from a list.
     Problem 6:
 Write a program which reads from a text file (text file to be provided) and returns individual words in lowercase and stripped from digits and punctuation. It should return a list of words.
 
-      Problem 6.1
+    Problem 6.1
 Make a function which takes as input the list of words, and returns a dict that has as a key the word and as value the number of occurrences.
-     Problem 6.2
+
+    Problem 6.2
 Return the word with the most occurrences
