@@ -6,7 +6,7 @@
 
 result = ""
 
-for number in range(2000, 3001):
+for number in range(2000, 3201):
     if number % 7 == 0 and number % 5 is not 0:
         result += str(number) + ", "
 print result[:-2]
