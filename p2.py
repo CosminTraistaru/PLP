@@ -8,22 +8,20 @@
 # Hints:
 # Use __init__ method to construct some parameters
 
-text = ""
 
-class ProblemTwo:
+class ProblemTwo(object):
     
     def __init__(self):
         self.message = ""
 
-    def getString(self):
+    def get_string(self):
         self.message = raw_input("Enter a text: ")
         return self.message
 
-    def printString(self, message):
+    def print_string(self, message):
         print self.message.upper()
 
 
 x = ProblemTwo()
-text = x.getString()
-x.printString(text)
+x.print_string(x.get_string())
 

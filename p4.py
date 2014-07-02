@@ -9,27 +9,43 @@
 # DIGITS 3
 
 
-class ProblemFour:
-
-    def getString(self):
-        text = raw_input("Enter input: ")
-        return text
-
-    def count_letters_and_digits(self, text):
-        letters = 0
-        digits = 0
-        for character in text:
-            if character.isalpha():
-                letters += 1
-            else:
-                if character.isdigit():
-                    digits += 1
-        
-        print "LETTERS " + str(letters)
-        print "DIGITS " + str(digits)
+def getString():
+    text = raw_input("Enter input: ")
+    return text
 
 
-x = ProblemFour()
-text = x.getString()
-x.count_letters_and_digits(text)
+def count_letters_and_digits(text):
+    letters = 0
+    digits = 0
+    for character in text:
+        if character.isalpha():
+            letters += 1
+        elif character.isdigit():
+            digits += 1
+
+    print "LETTERS {}".format(str(letters))
+    print "DIGITS {}".format(str(digits))
+
+
+def count_letters(text):
+    letters = 0
+    for character in text:
+        if character.isalpha():
+            letters += 1
+    return letters
+
+
+def count_digits(text):
+    digits = 0
+    for character in text:
+        if character.isdigit():
+            digits += 1
+    return digits
+
+
+text = getString()
+count_letters_and_digits(text)
+
+print "Digits {}".format(count_digits(text))
+print "Letters {}".format(count_letters(text))
 
