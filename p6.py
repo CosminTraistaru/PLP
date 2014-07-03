@@ -29,6 +29,7 @@ def occurence_dict(list_of_words):
 def most_occurence(list_of_words):
     mo = Counter(list_of_words).most_common(1)
     print mo
+    return mo
 
 
 words = read_text() # 6
