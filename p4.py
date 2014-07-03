@@ -14,38 +14,19 @@ def getString():
     return text
 
 
-def count_letters_and_digits(text):
+def count(text):
     letters = 0
     digits = 0
     for character in text:
         if character.isalpha():
             letters += 1
-        elif character.isdigit():
-            digits += 1
-
-    print "LETTERS {}".format(str(letters))
-    print "DIGITS {}".format(str(digits))
-
-
-def count_letters(text):
-    letters = 0
-    for character in text:
-        if character.isalpha():
-            letters += 1
-    return letters
-
-
-def count_digits(text):
-    digits = 0
-    for character in text:
         if character.isdigit():
             digits += 1
-    return digits
+    return [letters, digits]
 
 
 text = getString()
-count_letters_and_digits(text)
-
-print "Digits {}".format(count_digits(text))
-print "Letters {}".format(count_letters(text))
+counted = count(text)
+print "Letters {}".format(counted[0])
+print "Digits {}".format(counted[1])
 
