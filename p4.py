@@ -21,12 +21,7 @@ def get_string():
 def count(text):
     print "Digits {}".format(Counter(map(str.isdigit, text))[1])
     print "Letters {}".format( Counter(map(str.isalpha, text))[1])
- #    return [letters, digits]
-
 
 
 text = get_string()
 counted = count(text)
-# print "Letters {}".format(counted[0])
-# print "Digits {}".format(counted[1])
-
