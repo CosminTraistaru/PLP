@@ -7,12 +7,13 @@
 # Use list[index] notation to get a element from a list
 
 
+from itertools import product
+
+
 subject = ["I", "You"]
 verb = ["Play", "Love"]
 obj = ["Hockey", "Football"]
 
-for i in range(len(subject)):
-    for j in range(len(verb)):
-        for k in range(len(obj)):
-            print "{} {} {}".format(str(subject[i]), str(verb[j]),  str(obj[k]))
+for sentence in product(subject, verb, obj):
+    print ' '.join(sentence)
 
