@@ -24,4 +24,5 @@ def count(text):
 
 
 text = get_string()
-counted = count(text)
+count(text)
+
