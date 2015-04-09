@@ -23,6 +23,4 @@ def count(text):
     print "Letters {}".format( Counter(map(str.isalpha, text))[1])
 
 
-text = get_string()
-count(text)
-
+count(get_string())
