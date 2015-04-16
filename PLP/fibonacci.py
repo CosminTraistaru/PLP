@@ -19,13 +19,12 @@ def fibonacci_iter(num):
 def fibonacci_rec(num):
     if num == 0:
         return 0
-    if num == 1:
-        return 1
-    if num == 2:
+    if num in [1, 2]:
         return 1
     else:
         fib = fibonacci_rec(num - 1) + fibonacci_rec(num - 2)
     return fib
+
 
 if __name__ == '__main__':
     fibonacci_iter(19)
