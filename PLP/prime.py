@@ -4,7 +4,7 @@ import os
 def prime(num):
     if num < 2:
         return False
-    if num in [2, 3]:
+    if num in (2, 3):
         return True
     for n in xrange(2, num-1):
         if num % n == 0:
@@ -15,11 +15,16 @@ def prime(num):
 if __name__ == '__main__':
     print "Give me your name and money!"
     read = os.read(0, 10)
-    print prime(int(read))
+    try:
+        num = int(read)
+    except ValueError:
+        print "Not a number! Bye!"
+    print prime(num)
 
     print "All the numbers"
     read = os.read(0, 10)
-    numbers = range(1, int(read))
-    map(prime, numbers)
-
-
+    try:
+        num = int(read)
+    except ValueError:
+        print "Not a number! Bye!"
+    print map(prime, xrange(1, num))

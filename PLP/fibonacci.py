@@ -9,7 +9,7 @@ def fibonacci_iter(num):
     for n in xrange(0, num):
         if n == 0:
             fib.append(0)
-        elif n in [1, 2]:
+        elif n in (1, 2):
             fib.append(1)
         else:
             fib.append(fib[n-1] + fib[n-2])
@@ -19,11 +19,9 @@ def fibonacci_iter(num):
 def fibonacci_rec(num):
     if num == 0:
         return 0
-    if num in [1, 2]:
-        return 1
-    else:
-        fib = fibonacci_rec(num - 1) + fibonacci_rec(num - 2)
-    return fib
+    if num in (1, 2):
+        return
+    return fibonacci_rec(num - 1) + fibonacci_rec(num - 2)
 
 
 if __name__ == '__main__':
