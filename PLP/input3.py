@@ -1,4 +1,4 @@
-with open('text.txt', 'r') as f:
+with open('helper/text.txt', 'r') as f:
     text = f.read()
 
 abc = text.replace('\n', ' ').strip().split(' ')

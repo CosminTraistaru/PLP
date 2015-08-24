@@ -1,5 +1,5 @@
 sum = 0
-with open('file.txt', 'r') as f:
+with open('helper/file.txt', 'r') as f:
     for line in f:
         sum += int(line)
 
