@@ -1,6 +1,5 @@
-from flask import jsonify
+from ConfReader import ConfReader
 from flask.ext.api import FlaskAPI
-from ConfigParser import ConfigParser, NoSectionError, NoOptionError
 
 
 app = FlaskAPI(__name__)
@@ -27,35 +26,24 @@ def error_404(e):
 
 
 def read_value(section, key):
-    res = {}
     try:
-        res = {
-            key: parser.get(section, key)
-        }
-    except NoOptionError:
-        pass
-    return res
+        return parser.value(section, key)
+    except KeyError:
+        return {}
 
 
 def read_configuration(section):
-    res = {}
     try:
-        for t in parser.items(section):
-            res[t[0]] = t[1]
-    except NoSectionError:
-        pass
-    return res
+        return parser.options(section)
+    except KeyError:
+        return {}
 
 
 def all_configurations():
-    r = {}
-    for section in parser.sections():
-        r[section] = read_configuration(section)
-    return r
+    return parser.all()
 
 
 if __name__ == "__main__":
-    parser = ConfigParser()
-    parser.read('configuration_api/configuration.ini')
-
+    parser = ConfReader()
+    parser.read('PLP/configuration_api/configuration.ini')
     app.run(debug=True)
