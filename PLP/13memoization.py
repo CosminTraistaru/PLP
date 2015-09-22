@@ -6,8 +6,6 @@ def memoization(f):
 
     class MemoDict(dict):
 
-        __slots__ = ()
-
         def __missing__(self, key):
             self[key] = ret = f(key)
             return ret
