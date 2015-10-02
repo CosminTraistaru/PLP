@@ -1,4 +1,4 @@
-from prime import prime
+from functions_1_prime import prime
 
 
 with open('dest.txt', 'w+') as f:
