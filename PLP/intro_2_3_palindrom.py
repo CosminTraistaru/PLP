@@ -1,16 +1,15 @@
 
 def check_palindrome(num):
     list_of_num = []
-    original_number = num
+
     while num % 10 > 0:
         list_of_num.append(num % 10)
         num /= 10
-    number_of_elements = len(list_of_num)
-    for i in xrange(0, len(list_of_num)/2):
-        if not list_of_num[i] == list_of_num[number_of_elements - i - 1]:
-            print "{} not a pal".format(original_number)
-        else:
-            print "{} is palindrome".format(original_number)
+    # check that the list of digits is the same with the reversed one
+    if list_of_num == list_of_num[::-1]:
+        print 'pal'
+    else:
+        print 'no pal'
 
 
 if __name__ == "__main__":
